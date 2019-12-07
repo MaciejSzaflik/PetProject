@@ -1,13 +1,13 @@
 require "main/Board/matrix"
-jsonP = require "main/plugins/json/json"
+jsonP = require "main/plugins/json_a/json"
 
 function init(self)
 	local m1 = Matrix.new(3,3)
 	local m2 = Matrix.new(3,3)
-	print(jsonP.encode(m1))
-	m1[0][0] = 1
-	m1[0][0] = 1
-	print(jsonP.encode(Matrix.add(m1,m2)))
+
+	m1[1][1] = 1
+	m2[1][1] = 1
+	print(jsonP.encode(m1 + m2))
 end
 
 function final(self)
