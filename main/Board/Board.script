@@ -1,0 +1,36 @@
+require "main/Board/matrix"
+jsonP = require "main/plugins/json/json"
+
+function init(self)
+	local m1 = Matrix.new(3,3)
+	local m2 = Matrix.new(3,3)
+	print(jsonP.encode(m1))
+	m1[0][0] = 1
+	m1[0][0] = 1
+	print(jsonP.encode(Matrix.add(m1,m2)))
+end
+
+function final(self)
+	-- Add finalization code here
+	-- Remove this function if not needed
+end
+
+function update(self, dt)
+	-- Add update code here
+	-- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+	-- Add message-handling code here
+	-- Remove this function if not needed
+end
+
+function on_input(self, action_id, action)
+	-- Add input-handling code here
+	-- Remove this function if not needed
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Remove this function if not needed
+end
