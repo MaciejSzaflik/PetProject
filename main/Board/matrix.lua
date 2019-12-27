@@ -1,3 +1,5 @@
+require "main/util"
+
 Matrix = {}
 Matrix.mt = {}
 Matrix.mt.__add = Matrix.addSimple
@@ -35,5 +37,30 @@ function Matrix.append(m1,m2)
 		end
 	end
 	return toReturn
+end
+
+function Matrix.getValue(self, n, m)
+	if table.getn(self) < n then
+		if table.getn(self[n]) < m then
+			return true, self[n][m]
+		end
+	end
+
+	return false, 0
+end
+
+function Matrix.setValue(self, n, m, value)
+	if table.getn(self) < n then
+		if table.getn(self[n]) < m then
+			self[n][m] = value
+		end
+	end
+end
+
+function Matrix.getValueCantor(self, cantor)
+	
+end
+
+function Matrix.setValueCantor(self, cantor, value)
 end
 	

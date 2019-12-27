@@ -1,20 +1,6 @@
-require "main/Board/matrix"
-require "main/util"
-jsonP = require "main/plugins/json_a/json"
-
 function init(self)
-	local m1 = Matrix.new(3,3)
-	local m2 = Matrix.new(3,3)
-
-	m1[1][1] = 1
-	m2[1][1] = 1
-	print(jsonP.encode(m2))
-
-	local pairExample = cantorPair(13,123);
-	print(pairExample)
-	local x,y = reverseCantorPair(pairExample)
-	print(x)
-	print(y)
+	-- Add initialization code here
+	-- Remove this function if not needed
 end
 
 function final(self)
